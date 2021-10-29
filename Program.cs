@@ -1,10 +1,12 @@
-﻿using System;
+using System;
 using System.Linq;
  
 namespace C_
 {
     class Program
     {
+        string color = "red";
+
         static void MyMethod() {
             Console.WriteLine("I just got executed!");
         }
@@ -397,6 +399,33 @@ namespace C_
             names("ahmed","ali","cars");
             names(child2 : "ahmed" , child3: "ali" ,child1: "cars");
             names();
+
+            Program myObj = new Program();
+            Program myObj2 = new Program();
+            Console.WriteLine(myObj.color);
+            Console.WriteLine(myObj2.color);
+
+            bot MYbot = new bot();
+            Console.WriteLine(MYbot.hi);
+
+            MYbot.fullThrottle();
+
+            Console.WriteLine(MYbot.name);
+            MYbot.name = "Ahmed"; 
+            Console.WriteLine(MYbot.name);
+            Console.WriteLine(MYbot.model);
+
+            /*
+            Modifier	Description
+            public	    The code is accessible for all classes
+            private	    The code is only accessible within the same class
+            protected	The code is accessible within the same class, or in a class that is inherited from 
+                        that class. You will learn more about inheritance in a later chapter
+            internal	The code is only accessible within its own assembly, but not from another 
+                        assembly. You will learn more about this in a later chapter
+            */
+
+            
         }
     }
 }
